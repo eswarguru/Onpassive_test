@@ -1,0 +1,119 @@
+<div class="row">
+    <div class="img-holder">
+        <div class="hero">
+            <h1>Welcome to ONPASSIVE</h1>
+            <p>The ONPASSIVE develops and produces electromagnetic valves, actuators, sensors and smart modules for
+                customers
+                all over the world. These components are the most essential part of many vehicles and systems where
+                high-dynamic
+                processes take place and high standards are required in the areas of security, efficiency and
+                environmental
+                sustainability.
+                <br>ONPASSIVE – THE HEART OF MOTION
+            </p>
+        </div>
+    </div>
+    <div class="form-holder">
+        <div class="logo-holder">
+            <a href="#"><img src="assets/logo.png" style="width: 70%;"></a>
+        </div>
+        <br>
+
+        <h2 style="color: #2375b5; text-align: center;"> Please Register</h2>
+        <br>
+        <!-- Register Form -->
+        <form [formGroup]="registerForm">
+            <div class="form-row">
+        <!-- First Name-->
+
+                <div class="form-group col-5">
+                    <label>First Name</label>
+                    <input type="text" formControlName="firstName" minlength="3" maxlength="16" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.firstName.touched && f.firstName.errors }" />
+                    <div *ngIf="f.firstName.touched && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        <div *ngIf="f.firstName.errors.minlength">Minmum 3 Latters required</div>
+
+                    </div>
+                </div>
+                 <!-- Last Name-->
+
+                <div class="form-group col-5">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lastName" minlength="3" maxlength="16" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.lastName.touched && f.lastName.errors }" />
+                    <div *ngIf="f.lastName.touched && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        <div *ngIf="f.lastName.errors.minlength">Minmum 3 Latters required</div>
+
+                    </div>
+                </div>
+            </div>
+        <!-- Email-->
+
+            <div class="form-row">
+
+                <div class="form-group col-5">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.email.touched && f.email.errors }" />
+                    <div *ngIf="f.email.touched && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+
+        <!-- Mobile-->
+
+                <div class="form-group col-5">
+                    <label>mobile</label>
+                    <input type="number" minlength="10" maxlength="10" pattern="([7-9])+(?:-?\d){0,10}"
+                        formControlName="mobile" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.mobile.touched && f.mobile.errors }" />
+                    <div *ngIf="f.mobile.touched  && f.mobile.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobile.errors.required">Mobile Number is required</div>
+
+                        <div *ngIf="f.mobile.errors.pattern"> Please Enter Valid Number</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-5">
+                    <label>Password</label>
+                    <input type="password" formControlName="password" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.password.touched && f.password.errors }" />
+                    <div *ngIf="f.password.touched && f.password.errors" class="invalid-feedback">
+                        <div *ngIf="f.password.errors.required">Password is required</div>
+                        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+                <div class="form-group col-5">
+                    <label>Confirm Password</label>
+                    <input type="password" formControlName="confirmPassword" class="form-control"
+                        [ngClass]="{ 'is-invalid': f.confirmPassword.touched && f.confirmPassword.errors }" />
+                    <div *ngIf="f.confirmPassword.touched  && f.confirmPassword.errors" class="invalid-feedback">
+                        <div *ngIf="f.confirmPassword.errors.required">Confirm Password is required</div>
+                        <div *ngIf="f.confirmPassword.errors.mustMatch">Passwords must match</div>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mr-1" [disabled]="!registerForm.valid"
+                    (click)="onSubmit()">Register</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+            </div>
+        </form>
+                <!-- Copy Rights-->
+
+        <div class="login-footer">
+            <div class="row m-0">
+                <div class="col-sm-6 col-md-8 m-auto">
+                    <p>© 2020 ONPASSIVE. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+
+  .form-group.login{
+    padding: 10%!important;
+}
+
+.hero{
+    background:url(../../assets/bg.png) no-repeat center;
+    background-size:cover;
+    height:100vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:10%;
+    width:100%
+}
+
+
+h4 {
+  
+    font-size: 26px;
+    /* text-align: center; */
+    font: normal normal bold 26px/37px Arial;
+    margin:0px
+  }
+  .nameclass{
+    font-size: 21px;
+    font: normal normal bold Arial ;
+    color: #00559F;
+    margin-bottom: 25px;
+  
+  }
+  /* media quaries */
+
+  @media (max-width:768px){
+  .smalltext{
+    padding: 30px;
+  }
+  .text{
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+  }
+  .fields {
+   
+    height: 60px;
+    margin-left: 1px;
+  height: 60px; 
+    margin-top: 10px;
+}
+.hero {
+  height: 100vh;
+}
+a.edit {
+  right: -6px;
+}
+}
+h6{
+  color:  #6E6E6E;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+.img-holder{width: 56%;position: fixed;}
+.img-holder h1{font-size: 36px;font-weight: 100;letter-spacing: 0.02em;color: #fff;margin-bottom:15px;}
+.img-holder p{font-size: 18px;font-weight: 100;letter-spacing: 0.02em;color: #BFD4E7;margin: 0;}
+
+.form-holder{width: 44%;display: flex;flex-direction: column;justify-content: space-between;height: 100vh;position: fixed;right: 0;overflow: auto;}
+
+.login-header1{text-align: center;}
+.login-header h2{font-size: 32px;color:#000000;font-weight: bold;margin-bottom: 6px;}
+.login-header h6{font-size: 16px;color: #6E6E6E;font-weight: 400;}
+
+.form-holder .logo-holder{padding:50px 50px 0 0;text-align: right;}
+.form-holder .logo-holder a{display: inline-block;}
+.form-holder .btn{height: 50px;}
+
+.form-holder .form-group label{color: #000000;font-size: 15px;font-weight:400;line-height: 1;margin-bottom:10px;}
+.form-holder .form-group .has-icon{position: relative;}
+.form-holder .form-group .has-icon span{position: absolute;top: 2px;right: 2px;width: 46px;height: 42px;display: flex;align-items: center;justify-content: center; color: #00559F;font-size: 20px;}
+.form-holder .form-control{font-size: 13px !important;height: 46px;padding-right: 50px;}
+
+
+.login-footer p{border-top: 1px solid #EFF1F3;padding-top:10px;color: #99A1B3;font-size: 10px;text-align: center;}
+
+@media (max-width:767px){
+  .img-holder{display: none;}
+  .form-holder{width: 100%;}
+}
+
+
